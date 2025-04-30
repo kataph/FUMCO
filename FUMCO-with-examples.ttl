@@ -156,6 +156,16 @@ The above notion of dependence is specific and existential: x depends on y if an
                                                    iof-av:naturalLanguageDefinition "x is definition-founded on some entity y if and only if y is necessarily used to define x." .
 
 
+###  https://www.w3id.org/fumco/electric-coupling
+<https://www.w3id.org/fumco/electric-coupling> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <https://www.w3id.org/fumco/structural-coupling> ;
+                                               rdf:type owl:SymmetricProperty ;
+                                               rdfs:domain <https://www.w3id.org/fumco/TechnicalArtifact> ;
+                                               rdfs:range <https://www.w3id.org/fumco/TechnicalArtifact> ;
+                                               rdfs:comment "This is relation added for the sake of example (to relate individuals in the abox) and is not part of the fumco ontology proper" ;
+                                               rdfs:label "electric coupling" .
+
+
 ###  https://www.w3id.org/fumco/external-to
 <https://www.w3id.org/fumco/external-to> rdf:type owl:ObjectProperty ;
                                          rdfs:comment "This relation expresses the fact that two entities are 'external'. The precise definition of the external-to relation depends on the underlying reference ontology. Using DOLCE we defined it as follows: x is external to y if and only if x is neither a quality of y, nor one of y’s constituents, nor x and y have parts in common." ;
@@ -322,6 +332,14 @@ df34 precedes(c, d) =df ∀x(CL(x, d) =⇒ ∃y(CL(y, c) ∧ precedes(y, x)))"""
                                       iof-av:naturalLanguageDefinition "As the \"follows\" relation, but with the temporal order exchanged" .
 
 
+###  https://www.w3id.org/fumco/structural-coupling
+<https://www.w3id.org/fumco/structural-coupling> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain <https://www.w3id.org/fumco/TechnicalArtifact> ;
+                                                 rdfs:range <https://www.w3id.org/fumco/TechnicalArtifact> ;
+                                                 rdfs:comment "This is relation added for the sake of example (to relate individuals in the abox) and is not part of the fumco ontology proper" ;
+                                                 rdfs:label "structural coupling" .
+
+
 ###  https://www.w3id.org/fumco/sub-concept-of
 <https://www.w3id.org/fumco/sub-concept-of> rdf:type owl:ObjectProperty ;
                                             owl:inverseOf <https://www.w3id.org/fumco/super-concept-of> ;
@@ -479,6 +497,13 @@ The additional leaf classes present (e.g. To Groove, Connect, ...) are just adde
                                                                iof-av:naturalLanguageDefinition "An concept that classifies a perdurant based on what happens to some amount of matter related to it" .
 
 
+###  https://www.w3id.org/fumco/Battery
+<https://www.w3id.org/fumco/Battery> rdf:type owl:Class ;
+                                     rdfs:subClassOf <https://www.w3id.org/fumco/TechnicalArtifact> ;
+                                     rdfs:comment "This is just a domain specific class give for the sake of example, to showcase possible extensions of the ontology." ;
+                                     rdfs:label "Battery" .
+
+
 ###  https://www.w3id.org/fumco/BatteryVoltage
 <https://www.w3id.org/fumco/BatteryVoltage> rdf:type owl:Class ;
                                             rdfs:subClassOf <https://www.w3id.org/fumco/Capacity> ;
@@ -558,6 +583,13 @@ For instance, a cutting action entails that there is something that is the subje
  ] .
 
 
+###  https://www.w3id.org/fumco/Cilinder
+<https://www.w3id.org/fumco/Cilinder> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://www.w3id.org/fumco/TechnicalArtifact> ;
+                                      rdfs:comment "This is just a domain specific class give for the sake of example, to showcase possible extensions of the ontology." ;
+                                      rdfs:label "Cilinder" .
+
+
 ###  https://www.w3id.org/fumco/Concept
 <https://www.w3id.org/fumco/Concept> rdf:type owl:Class ;
                                      rdfs:subClassOf <https://w3id.org/DOLCE/OWL/DOLCEbasic#NonAgentiveSocialObject> ;
@@ -617,6 +649,13 @@ P(a, c, t f ) ∧ P(b, c, t f )) ∧ ¬∃c′(POB(c′) ∧ PC(c′, si, ti) �
                                       iof-av:naturalLanguageDefinition "An concept that classifies a perdurant if the value of some quality (that takes values in an ordered quality space) related to it decreases" .
 
 
+###  https://www.w3id.org/fumco/ElectricSwitch
+<https://www.w3id.org/fumco/ElectricSwitch> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://www.w3id.org/fumco/TechnicalArtifact> ;
+                                            rdfs:comment "This is just a domain specific class give for the sake of example, to showcase possible extensions of the ontology." ;
+                                            rdfs:label "Electric Switch" .
+
+
 ###  https://www.w3id.org/fumco/EndurantOntologicalFunction
 <https://www.w3id.org/fumco/EndurantOntologicalFunction> rdf:type owl:Class ;
                                                          rdfs:subClassOf :ParticularOntologicalFunction ;
@@ -648,6 +687,13 @@ They are, essentially, plans, list of steps to be executed in order to execute t
                                       rdfs:label "Flow Rate" .
 
 
+###  https://www.w3id.org/fumco/GenerateElectricEnergy
+<https://www.w3id.org/fumco/GenerateElectricEnergy> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <https://www.w3id.org/fumco/Capability> ;
+                                                    rdfs:comment "This is just a domain specific class give for the sake of example, to showcase possible extensions of the ontology." ;
+                                                    rdfs:label "Capability of Generating Electrical Energy" .
+
+
 ###  https://www.w3id.org/fumco/Goal
 <https://www.w3id.org/fumco/Goal> rdf:type owl:Class ;
                                   rdfs:subClassOf <https://www.w3id.org/fumco/Concept> ;
@@ -660,6 +706,13 @@ They are, essentially, plans, list of steps to be executed in order to execute t
 Their proper definition is delegated to an external ontology. 
 We proceed with a commonsense meaning of goals.""" ;
                                   iof-av:semiFormalNaturalLanguageAxiom "goals are concepts that classifies stative perdurants only." .
+
+
+###  https://www.w3id.org/fumco/Heating
+<https://www.w3id.org/fumco/Heating> rdf:type owl:Class ;
+                                     rdfs:subClassOf <https://www.w3id.org/fumco/Capability> ;
+                                     rdfs:comment "This is just a domain specific class give for the sake of example, to showcase possible extensions of the ontology." ;
+                                     rdfs:label "Capability of Heating" .
 
 
 ###  https://www.w3id.org/fumco/Increase
@@ -677,6 +730,27 @@ We proceed with a commonsense meaning of goals.""" ;
                                               skos:example "Length, Mass, Shape" ;
                                               iof-av:firstOrderLogicDefinition "intrinsicQt(x) ↔ (Q(x) ∧¬relationalQt(x))" ;
                                               iof-av:semiFormalNaturalLanguageDefinition "We define relational qualities as the class complementary to Relational qualities" .
+
+
+###  https://www.w3id.org/fumco/Length
+<https://www.w3id.org/fumco/Length> rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://www.w3id.org/fumco/IntrinsicQuality> ;
+                                    rdfs:comment "This is just a domain specific class give for the sake of example, to showcase possible extensions of the ontology." ;
+                                    rdfs:label "Length" .
+
+
+###  https://www.w3id.org/fumco/Mass
+<https://www.w3id.org/fumco/Mass> rdf:type owl:Class ;
+                                  rdfs:subClassOf <https://www.w3id.org/fumco/IntrinsicQuality> ;
+                                  rdfs:comment "This is just a domain specific class give for the sake of example, to showcase possible extensions of the ontology." ;
+                                  rdfs:label "Mass" .
+
+
+###  https://www.w3id.org/fumco/Motor
+<https://www.w3id.org/fumco/Motor> rdf:type owl:Class ;
+                                   rdfs:subClassOf <https://www.w3id.org/fumco/TechnicalArtifact> ;
+                                   rdfs:comment "This is just a domain specific class give for the sake of example, to showcase possible extensions of the ontology." ;
+                                   rdfs:label "Motor" .
 
 
 ###  https://www.w3id.org/fumco/OntologicalFunction
@@ -738,11 +812,32 @@ Instead, an extensional definition, as the former one above, can only be done wh
                                                                iof-av:naturalLanguageDefinition "An concept that classifies a perdurant based on what happens to some physical object related to it" .
 
 
+###  https://www.w3id.org/fumco/Pipe
+<https://www.w3id.org/fumco/Pipe> rdf:type owl:Class ;
+                                  rdfs:subClassOf <https://www.w3id.org/fumco/TechnicalArtifact> ;
+                                  rdfs:comment "This is just a domain specific class give for the sake of example, to showcase possible extensions of the ontology." ;
+                                  rdfs:label "Pipe" .
+
+
 ###  https://www.w3id.org/fumco/ProcessOntologicalFunction
 <https://www.w3id.org/fumco/ProcessOntologicalFunction> rdf:type owl:Class ;
                                                         rdfs:subClassOf <https://www.w3id.org/fumco/PerdurantOntologicalFunction> ;
                                                         rdfs:label "Ontological Function about Processes" ;
                                                         iof-av:naturalLanguageDefinition "An concept that classifies a perdurant based on what happens to some (other) process related to it" .
+
+
+###  https://www.w3id.org/fumco/Pump
+<https://www.w3id.org/fumco/Pump> rdf:type owl:Class ;
+                                  rdfs:subClassOf <https://www.w3id.org/fumco/TechnicalArtifact> ;
+                                  rdfs:comment "This is just a domain specific class give for the sake of example, to showcase possible extensions of the ontology." ;
+                                  rdfs:label "Pump" .
+
+
+###  https://www.w3id.org/fumco/Pumping
+<https://www.w3id.org/fumco/Pumping> rdf:type owl:Class ;
+                                     rdfs:subClassOf <https://www.w3id.org/fumco/Capability> ;
+                                     rdfs:comment "This is just a domain specific class give for the sake of example, to showcase possible extensions of the ontology." ;
+                                     rdfs:label "Capability of Pumping" .
 
 
 ###  https://www.w3id.org/fumco/QualityOntologicalFunction
@@ -777,6 +872,13 @@ ql(q, vi, ti) ∧ ql(q, vf, tf) ∧ ¬(vi = vf)))""" ;
                                         rdfs:label "Resistance" .
 
 
+###  https://www.w3id.org/fumco/Resistor
+<https://www.w3id.org/fumco/Resistor> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://www.w3id.org/fumco/TechnicalArtifact> ;
+                                      rdfs:comment "This is just a domain specific class give for the sake of example, to showcase possible extensions of the ontology." ;
+                                      rdfs:label "Resistor" .
+
+
 ###  https://www.w3id.org/fumco/Role
 <https://www.w3id.org/fumco/Role> rdf:type owl:Class ;
                                   rdfs:subClassOf <https://www.w3id.org/fumco/Concept> ,
@@ -805,6 +907,13 @@ ql(q, vi, ti) ∧ ql(q, vf, tf) ∧ ¬(vi = vf)))""" ;
                                               iof-av:semiFormalNaturalLanguageDefinition "Selected functions are, by definition, exactly those attributed to an entity by an agent." .
 
 
+###  https://www.w3id.org/fumco/Shape
+<https://www.w3id.org/fumco/Shape> rdf:type owl:Class ;
+                                   rdfs:subClassOf <https://www.w3id.org/fumco/IntrinsicQuality> ;
+                                   rdfs:comment "This is just a domain specific class give for the sake of example, to showcase possible extensions of the ontology." ;
+                                   rdfs:label "Shape" .
+
+
 ###  https://www.w3id.org/fumco/SolvedFunction
 <https://www.w3id.org/fumco/SolvedFunction> rdf:type owl:Class ;
                                             owl:equivalentClass [ rdf:type owl:Restriction ;
@@ -817,6 +926,13 @@ ql(q, vi, ti) ∧ ql(q, vf, tf) ∧ ¬(vi = vf)))""" ;
                                             iof-av:firstOrderLogicDefinition "solvedFunction(x) ↔ mainFunction(x)" ;
                                             iof-av:naturalLanguageDefinition "Solved functions are functions for which a plan of how to carry them out exist." ;
                                             iof-av:semiFormalNaturalLanguageDefinition "engineering functions and main-functions coincide" .
+
+
+###  https://www.w3id.org/fumco/SpotWelding
+<https://www.w3id.org/fumco/SpotWelding> rdf:type owl:Class ;
+                                         rdfs:subClassOf <https://www.w3id.org/fumco/Welding> ;
+                                         rdfs:comment "This class is just a domain specific example to showcase possible extensions of the ontology" ;
+                                         rdfs:label "Spot Welding" .
 
 
 ###  https://www.w3id.org/fumco/System
@@ -890,9 +1006,157 @@ extension tf) with a participating entity (a) that has a feature (f) of ‘Groov
 type at time tf but not at time ti.""" .
 
 
+###  https://www.w3id.org/fumco/VoltageDivider
+<https://www.w3id.org/fumco/VoltageDivider> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://www.w3id.org/fumco/EngineeringMethod> ;
+                                            rdfs:comment "An electrical engineering method used to obtain different voltage values from a voltage source. Through connecting two or more resistores in series with a voltage source, and by calculating the resistance values using Kirchhoff's law, one can design the divider in such a way to obtain any desired voltage value(s) lower then the original voltage input." ,
+                                                         "This class is just a domain specific example to showcase possible extensions of the ontology" ;
+                                            rdfs:label "Voltage Divider" .
+
+
+###  https://www.w3id.org/fumco/Welding
+<https://www.w3id.org/fumco/Welding> rdf:type owl:Class ;
+                                     rdfs:subClassOf <https://www.w3id.org/fumco/EngineeringMethod> ;
+                                     rdfs:comment "This class is just a domain specific example to showcase possible extensions of the ontology" ;
+                                     rdfs:label "Welding" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://www.w3id.org/fumco/adjust_voltage_in_circuit_1_1
+<https://www.w3id.org/fumco/adjust_voltage_in_circuit_1_1> rdf:type owl:NamedIndividual ,
+                                                                    <https://www.w3id.org/fumco/SystemicFunction> ;
+                                                           <https://www.w3id.org/fumco/main-function-of> <https://www.w3id.org/fumco/voltage_divider_1> ;
+                                                           <https://www.w3id.org/fumco/systemic-function-of> <https://www.w3id.org/fumco/electrical_circuit_1> .
+
+
+###  https://www.w3id.org/fumco/battery_1
+<https://www.w3id.org/fumco/battery_1> rdf:type owl:NamedIndividual ,
+                                                <https://www.w3id.org/fumco/Battery> ;
+                                       <https://w3id.org/DOLCE/OWL/DOLCEbasic#constantPartOf> <https://www.w3id.org/fumco/electrical_circuit_1> ;
+                                       <https://www.w3id.org/fumco/electric-coupling> <https://www.w3id.org/fumco/resistor_1> ,
+                                                                                      <https://www.w3id.org/fumco/switch_1> .
+
+
+###  https://www.w3id.org/fumco/battery_voltage_1
+<https://www.w3id.org/fumco/battery_voltage_1> rdf:type owl:NamedIndividual ,
+                                                        <https://www.w3id.org/fumco/BatteryVoltage> ;
+                                               <https://w3id.org/DOLCE/OWL/DOLCEbasic#directQualityOf> <https://www.w3id.org/fumco/battery_1> ;
+                                               <https://www.w3id.org/fumco/has-direct-quale> "5"^^<https://www.w3id.org/fumco/volts> .
+
+
+###  https://www.w3id.org/fumco/change_voltage_1
+<https://www.w3id.org/fumco/change_voltage_1> rdf:type owl:NamedIndividual ,
+                                                       <https://www.w3id.org/fumco/QualityValueOntologicalFunction> .
+
+
+###  https://www.w3id.org/fumco/convert_chemical_energy_into_electricity_1
+<https://www.w3id.org/fumco/convert_chemical_energy_into_electricity_1> rdf:type owl:NamedIndividual ,
+                                                                                 <https://www.w3id.org/fumco/OntologicalFunction> ;
+                                                                        rdfs:comment "Ontological function: converting chemical energy into electricity" .
+
+
+###  https://www.w3id.org/fumco/convert_chemical_energy_into_electricity_in_circuit_1
+<https://www.w3id.org/fumco/convert_chemical_energy_into_electricity_in_circuit_1> rdf:type owl:NamedIndividual ,
+                                                                                            <https://www.w3id.org/fumco/SystemicFunction> ;
+                                                                                   <https://w3id.org/DOLCE/OWL/DOLCEbasic#specificallyDependsOn> <https://www.w3id.org/fumco/electrical_circuit_1> ;
+                                                                                   <https://www.w3id.org/fumco/sub-concept-of> <https://www.w3id.org/fumco/convert_chemical_energy_into_electricity_1> ;
+                                                                                   <https://www.w3id.org/fumco/sub-function-of> <https://www.w3id.org/fumco/voltage_divider_1> ;
+                                                                                   <https://www.w3id.org/fumco/systemic-function-of> <https://www.w3id.org/fumco/battery_1> ;
+                                                                                   rdfs:comment "Systemic function: converting chemical energy into electricity in the context of a specific system (in a specific position)." .
+
+
+###  https://www.w3id.org/fumco/dissipate_energy_cap_1
+<https://www.w3id.org/fumco/dissipate_energy_cap_1> rdf:type owl:NamedIndividual ,
+                                                             <https://www.w3id.org/fumco/Heating> ;
+                                                    <https://w3id.org/DOLCE/OWL/DOLCEbasic#directQualityOf> <https://www.w3id.org/fumco/resistor_1> ;
+                                                    <https://w3id.org/DOLCE/OWL/DOLCEbasic#specificallyDependsOn> <https://www.w3id.org/fumco/resistance_1> ;
+                                                    <https://www.w3id.org/fumco/definition-founded-on> <https://www.w3id.org/fumco/change_voltage_1> .
+
+
+###  https://www.w3id.org/fumco/drop_voltage_in_circuit_1_1
+<https://www.w3id.org/fumco/drop_voltage_in_circuit_1_1> rdf:type owl:NamedIndividual ,
+                                                                  <https://www.w3id.org/fumco/SystemicFunction> ;
+                                                         <https://www.w3id.org/fumco/sub-function-of> <https://www.w3id.org/fumco/voltage_divider_1> ;
+                                                         <https://www.w3id.org/fumco/systemic-function-of> <https://www.w3id.org/fumco/resistor_1> .
+
+
+###  https://www.w3id.org/fumco/drop_voltage_in_circuit_1_2
+<https://www.w3id.org/fumco/drop_voltage_in_circuit_1_2> rdf:type owl:NamedIndividual ,
+                                                                  <https://www.w3id.org/fumco/SystemicFunction> ;
+                                                         <https://www.w3id.org/fumco/sub-function-of> <https://www.w3id.org/fumco/voltage_divider_1> ;
+                                                         <https://www.w3id.org/fumco/systemic-function-of> <https://www.w3id.org/fumco/resistor_2> .
+
+
+###  https://www.w3id.org/fumco/electrical_circuit_1
+<https://www.w3id.org/fumco/electrical_circuit_1> rdf:type owl:NamedIndividual ,
+                                                           <https://www.w3id.org/fumco/System> ;
+                                                  <https://w3id.org/DOLCE/OWL/DOLCEbasic#constantPartOf> <https://www.w3id.org/fumco/electrical_circuit_1> .
+
+
+###  https://www.w3id.org/fumco/generate_electricity_1
+<https://www.w3id.org/fumco/generate_electricity_1> rdf:type owl:NamedIndividual ,
+                                                             <https://www.w3id.org/fumco/GenerateElectricEnergy> ;
+                                                    <https://w3id.org/DOLCE/OWL/DOLCEbasic#directQualityOf> <https://www.w3id.org/fumco/battery_1> ;
+                                                    <https://w3id.org/DOLCE/OWL/DOLCEbasic#specificallyDependsOn> <https://www.w3id.org/fumco/battery_voltage_1> ;
+                                                    <https://www.w3id.org/fumco/definition-founded-on> <https://www.w3id.org/fumco/convert_chemical_energy_into_electricity_1> ;
+                                                    rdfs:comment "Individual quality of being able to generate electricity" .
+
+
+###  https://www.w3id.org/fumco/resistance_1
+<https://www.w3id.org/fumco/resistance_1> rdf:type owl:NamedIndividual ,
+                                                   <https://www.w3id.org/fumco/Resistance> ;
+                                          <https://www.w3id.org/fumco/has-direct-quale> "10"^^<https://www.w3id.org/fumco/ohms> .
+
+
+###  https://www.w3id.org/fumco/resistor_1
+<https://www.w3id.org/fumco/resistor_1> rdf:type owl:NamedIndividual ,
+                                                 <https://www.w3id.org/fumco/Resistor> ;
+                                        <https://w3id.org/DOLCE/OWL/DOLCEbasic#constantPartOf> <https://www.w3id.org/fumco/electrical_circuit_1> ;
+                                        <https://www.w3id.org/fumco/electric-coupling> <https://www.w3id.org/fumco/battery_1> ,
+                                                                                       <https://www.w3id.org/fumco/resistor_2> .
+
+
+###  https://www.w3id.org/fumco/resistor_2
+<https://www.w3id.org/fumco/resistor_2> rdf:type owl:NamedIndividual ,
+                                                 <https://www.w3id.org/fumco/Resistor> ;
+                                        <https://www.w3id.org/fumco/electric-coupling> <https://www.w3id.org/fumco/switch_1> .
+
+
+###  https://www.w3id.org/fumco/switch_1
+<https://www.w3id.org/fumco/switch_1> rdf:type owl:NamedIndividual ,
+                                               <https://www.w3id.org/fumco/ElectricSwitch> ;
+                                      <https://w3id.org/DOLCE/OWL/DOLCEbasic#constantPartOf> <https://www.w3id.org/fumco/electrical_circuit_1> ;
+                                      <https://www.w3id.org/fumco/electric-coupling> <https://www.w3id.org/fumco/battery_1> .
+
+
+###  https://www.w3id.org/fumco/trasform_electricity_into_heat_1
+<https://www.w3id.org/fumco/trasform_electricity_into_heat_1> rdf:type owl:NamedIndividual ,
+                                                                       <https://www.w3id.org/fumco/SystemicFunction> .
+
+
+###  https://www.w3id.org/fumco/voltage_divider_1
+<https://www.w3id.org/fumco/voltage_divider_1> rdf:type owl:NamedIndividual ,
+                                                        <https://www.w3id.org/fumco/VoltageDivider> .
+
+
 #################################################################
 #    General axioms
 #################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://www.w3id.org/fumco/Battery>
+                <https://www.w3id.org/fumco/Cilinder>
+                <https://www.w3id.org/fumco/ElectricSwitch>
+                <https://www.w3id.org/fumco/Motor>
+                <https://www.w3id.org/fumco/Pipe>
+                <https://www.w3id.org/fumco/Pump>
+                <https://www.w3id.org/fumco/Resistor>
+              )
+] .
+
 
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( <https://www.w3id.org/fumco/BatteryVoltage>
