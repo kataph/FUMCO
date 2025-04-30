@@ -7,6 +7,8 @@ The DOLCE Lite ontology, which is used to align this ontology with DOLCE, is tak
 
 # Example queries
 
+A version of the ontology with some examplificative individuals is supplied (FUMCO-with-examples.ttl). On that ontology the following SPARQL queries can be executed with non-empty results.
+
 In the paper some queries are written as functions of a variable input iri.
 In the following we rewrite them with a fixed iri for sake of example and to facilitate reproducibility.
 
